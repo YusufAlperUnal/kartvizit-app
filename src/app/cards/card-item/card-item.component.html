@@ -1,0 +1,16 @@
+ <div *ngIf="cardItem">
+   <mat-card class="example-card">
+     <mat-card-header (click)="openUpdateCardModal(cardItem)">
+       <mat-card-title>{{cardItem.id}}</mat-card-title>
+       <mat-card-subtitle>{{cardItem.name}}</mat-card-subtitle>
+     </mat-card-header>
+     <mat-card-content>
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item">{{cardItem.username}} </li>
+         <li class="list-group-item">{{cardItem.address?.city}}</li>
+         <li class="list-group-item">{{cardItem.address?.street}}</li>
+
+       </ul>
+     </mat-card-content>
+   </mat-card>
+ </div>
